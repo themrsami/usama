@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  @apply container w-full h-full mx-auto;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.active-nav{
+  @apply   bg-black p-2 rounded-full text-white transition-all duration-500 ease-in-out;
+}
+.inactive-nav{
+  @apply   text-black hover:bg-gray-500 p-2 rounded-full
+}
+
+.active-nav-dark{
+  @apply   bg-white p-2 rounded-full text-black transition-all duration-500 ease-in-out;
+}
+.inactive-nav-dark{
+  @apply   text-white hover:bg-gray-500 p-2 rounded-full
+}
+
+
+.theme-icon-sun{
+  @apply bg-gray-900 p-2 text-xl rounded-full text-yellow-400 transition-all duration-500 ease-in-out ring-1 ring-yellow-400;
+}
+
+.theme-icon-moon{
+  @apply bg-gray-900 p-2 text-xl rounded-full text-white transition-all duration-500 ease-in-out ring-1 ring-white;
+}
+
+.name-heading{
+  @apply   bg-white px-4 py-2 rounded-full text-lg text-black transition-all duration-500 ease-in-out ring-1 ring-white cursor-pointer flex justify-center items-center;
+}
+
+.name-heading-light{
+  @apply   bg-black px-4 py-2 rounded-full text-lg text-white transition-all duration-500 ease-in-out ring-1 ring-white cursor-pointer flex justify-center items-center;
+}
+
+/* Homepage Light Theme*/
+
+.homepage-grid-light{
+  @apply bg-white text-black rounded-3xl ring-1 ring-black hover:cursor-pointer backdrop-blur-xl hover:bg-gray-200;
+}
+
+
+.homepage-heading-light{
+  @apply text-white
+}
+
+.homepage-description-light{
+  @apply text-gray-800
+}
+
+/* Homepage Dark Theme*/
+
+.homepage-grid-dark{
+  @apply bg-gray-900/50 text-white rounded-3xl ring-1 ring-white hover:cursor-pointer backdrop-blur-xl hover:bg-gray-900;
+}
+.homepage-heading-dark{
+  @apply text-black
+}
+
+.homepage-description-dark{
+  @apply text-gray-300
+}
+
+/* body bg*/
+
+.dark-body{
+  @apply bg-gradient-to-r from-[#10101A] to-[#222235];
+}
+
+.light-body{
+  @apply bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
+
+.delay-3 {
+  animation-delay: 1.5s;
+}

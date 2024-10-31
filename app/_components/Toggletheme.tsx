@@ -18,7 +18,7 @@ const Toggletheme = () => {
 
   return (
     <div>
-      <button className='flex justify-center items-center' onClick={toggleTheme}>
+      <button id="toggle-theme" aria-label="toggle-theme" className='flex justify-center items-center' onClick={toggleTheme}>
         {isToggled ? (
           <BiSun className='text-5xl h-6 text-white' />
         ) : (

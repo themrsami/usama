@@ -23,33 +23,33 @@ export default function Topnav() {
     <div className={`relative max-w-full`}>
       <Dock direction="middle" className={`border max-w-96 ${border}`}>
         <DockIcon>
-          <Link href="https://www.github.com/themrsami" target="_blank">
+          <Link href="https://www.github.com/themrsami" target="_blank" aria-label="Github">
             <Icons.gitHub className={`${theme} size-6`} />
           </Link>
         </DockIcon>
         
           <DockIcon>
-            <Link href="https://wa.me/923124156411" target="_blank">
+            <Link href="https://wa.me/923124156411" target="_blank" aria-label="Whatsapp">
               <Icons.whatsapp className={`${theme} size-6`} />
             </Link>
           </DockIcon>
         
           <DockIcon>
-            <Link href="https://www.instagram.com/themrsami" target="_blank">
+            <Link href="https://www.instagram.com/themrsami" target="_blank" aria-label="Instagram">
               <Icons.instagram className={`${theme} size-6`} />
             </Link>
           </DockIcon>
         
           <DockIcon>
-            <Link href="mailto:usamanazir13@gmail.com" target="_blank">
+            <Link href="mailto:usamanazir13@gmail.com" target="_blank" aria-label="Mail">
               <Icons.email className={`${theme} size-6`} />
             </Link>
           </DockIcon>
         
         <DockIcon>
-          <Link href="https://www.linkedin.com/in/usama-nazir" target="_blank">
+            <Link href="https://www.linkedin.com/in/usama-nazir" target="_blank" aria-label="LinkedIn">
             <Icons.linkedin className={`${theme} size-6`} />
-          </Link>
+            </Link>
         </DockIcon>
         <DockIcon>
           <Toggletheme />

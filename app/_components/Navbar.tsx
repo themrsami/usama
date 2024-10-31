@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 import { usePathname } from 'next/navigation';
 import { BiHome, BiSolidUser, BiSolidCategoryAlt, BiBlanket, BiPhone } from "react-icons/bi";
 import { ThemeContext } from './ThemeContext';
-import { CoolMode } from "@/components/magicui/cool-mode";
 import Topnav from './Topnav';
 import { motion } from 'framer-motion';
 
@@ -34,7 +33,6 @@ const Navbar = () => {
         variants={slideIn}
         className={`fixed z-[9999] bottom-8 left-0 right-0 flex justify-center mx-auto items-center max-w-[280px] py-2 mt-6 rounded-full backdrop-blur-md ring-2 ${navring}`}>
         <ul className='flex w-[85%] justify-between mx-auto'>
-          <CoolMode>
             <Link href='/' className={pathname === '/' ? activenav : inactivenav}>
               <motion.li className='group' whileHover={{ scale: 1.1 }} transition={spring}>
                 <BiHome />
@@ -43,8 +41,6 @@ const Navbar = () => {
                 </span>
               </motion.li>
             </Link>
-          </CoolMode>
-          <CoolMode>
             <Link prefetch={true} href='/about' className={pathname === '/about' ? activenav : inactivenav}>
               <motion.li className='group' whileHover={{ scale: 1.1 }} transition={spring}>
                 <BiSolidUser />
@@ -53,8 +49,6 @@ const Navbar = () => {
                 </span>
               </motion.li>
             </Link>
-          </CoolMode>
-          <CoolMode>
             <Link prefetch={true} href='/services' className={pathname === '/services' ? activenav : inactivenav}>
               <motion.li className='group' whileHover={{ scale: 1.1 }} transition={spring}>
                 <BiSolidCategoryAlt />
@@ -63,8 +57,6 @@ const Navbar = () => {
                 </span>
               </motion.li>
             </Link>
-          </CoolMode>
-          <CoolMode>
             <Link prefetch={true} href='/portfolio' className={pathname === '/portfolio' ? activenav : inactivenav}>
               <motion.li className='group' whileHover={{ scale: 1.1 }} transition={spring}>
                 <BiBlanket />
@@ -73,8 +65,6 @@ const Navbar = () => {
                 </span>
               </motion.li>
             </Link>
-          </CoolMode>
-          <CoolMode>
             <Link prefetch={true} href='/contact' className={pathname === '/contact' ? activenav : inactivenav}>
               <motion.li className='group' whileHover={{ scale: 1.1 }} transition={spring}>
                 <BiPhone />
@@ -83,7 +73,6 @@ const Navbar = () => {
                 </span>
               </motion.li>
             </Link>
-          </CoolMode>
         </ul>
       </motion.nav>
 
